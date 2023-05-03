@@ -63,7 +63,10 @@ const Carts = () => {
               <h2 className="mr-auto">Total Price:</h2>
               <h2>${totalPrice}</h2>
             </div>
-            <button className="btn btn-primary" disabled={items.length === 0}>
+            <button
+              className="disabled:cursor-not-allowed bg-primary rounded-md text-white p-4 font-bold"
+              disabled={items.length === 0}
+            >
               Check Out
             </button>
           </div>

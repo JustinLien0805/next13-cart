@@ -1,10 +1,13 @@
 import { create } from "zustand";
+
+// Define the type of the CartItem object
 interface CartItem {
   product_title: string;
   quantity: number;
   product_price: number;
 }
 
+// Define the type of the CartStore object
 type CartStore = {
   items: CartItem[];
   totalPrice: number;
@@ -15,6 +18,7 @@ type CartStore = {
   decreaseQuantity: (item: CartItem) => void;
 };
 
+// Create the store
 const useCartStore = create<CartStore>((set) => ({
   items: [],
   totalPrice: 0,

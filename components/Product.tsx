@@ -36,7 +36,6 @@ const Product = ({ product }: { product: ProductProps }) => {
     } else {
       handleAddToCart();
     }
-    console.log(totalPrice);
   };
 
   const handleDecrease = () => {
@@ -45,7 +44,6 @@ const Product = ({ product }: { product: ProductProps }) => {
     } else if (cartItem && cartItem.quantity === 1) {
       removeItem(cartItem);
     }
-    console.log(totalPrice);
   };
   return (
     <div className="border-2 p-4 border-black">

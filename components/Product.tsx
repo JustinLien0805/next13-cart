@@ -8,6 +8,7 @@ type ProductProps = {
 };
 import Image from "next/image";
 import useCartStore from "@/stores/useCartStore";
+import Link from "next/link";
 const Product = ({ product }: { product: ProductProps }) => {
   const {
     addItem,
@@ -54,6 +55,7 @@ const Product = ({ product }: { product: ProductProps }) => {
         height={200}
         className="rounded-md"
       /> */}
+      <Link href="/photo/1">click me</Link>
       <h1 className="text-lg font-bold">{product.title}</h1>
       <p className="text-sm font-light text-neutral-500">
         {product.description}

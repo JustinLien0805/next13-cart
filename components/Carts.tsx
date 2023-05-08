@@ -51,7 +51,7 @@ const Carts = () => {
   const { items, totalPrice } = useCartStore();
   return (
     <label htmlFor="my-modal" className="modal cursor-pointer">
-      <label className="modal-box relative h-96" htmlFor="">
+      <label className="modal-box relative max-h-[30rem]" htmlFor="">
         <h3 className="text-2xl font-bold border-b py-4">Cart Items</h3>
         <div className="py-4 flex flex-col gap-4">
           {items.map((item, index) => (
@@ -67,7 +67,7 @@ const Carts = () => {
               className="disabled:cursor-not-allowed bg-primary rounded-md text-white p-4 font-bold"
               disabled={items.length === 0}
             >
-              Check Out
+              Checkout
             </button>
           </div>
         </div>
